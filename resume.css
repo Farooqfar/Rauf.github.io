@@ -1,0 +1,902 @@
+:root
+{
+    --bgcolor:black;
+    --color:red;
+    --txtbg:rgb(0, 255, 0);
+}
+*
+{
+    scroll-behavior: smooth;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body
+{
+    background-color:var(--bgcolor);
+    overflow-x: hidden;
+    
+    
+}
+
+
+
+
+.navi
+{
+    position: relative;
+    top: 10px;
+    background-color: transparent;
+    width: 100%;
+}
+.navi ul
+{
+    display: flex;
+    justify-content: right;
+}
+.navi ul li
+{
+    list-style: none;
+    
+    
+}
+.navi ul li a
+{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color:var(--txtbg);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px 50px;
+    transition: .2s all linear;
+    
+}
+
+.navi ul li a:hover
+{
+    background-color:black;
+    box-shadow: 1px 1px 5px gainsboro;
+    border-radius: 20px;
+    
+    
+}
+
+
+.fixed
+{
+    position: sticky;
+    top: 10px;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(64, 104, 89, 0.5);
+    color: black;
+    z-index: 1000;
+    padding: 1px;
+    transition: .6s all linear;
+    
+}
+
+
+
+.pages
+{
+    position: relative;
+    top: 15px;
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    margin: 10px 0px;
+    position: relative;
+    
+}
+
+.pages .picture
+{
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px var(--txtbg);
+    animation: mov 6s linear infinite;
+   
+  
+}
+
+@keyframes mov{
+    0%,100%
+    {
+        transform: translate(0px);
+    }
+
+    50%
+    {
+        transform: translateY(30px);
+    }
+    
+    
+}
+
+    
+.pages .picture img
+{
+    position: absolute;
+    top: -20%;
+    left: 5%;
+    width: 100%;
+    animation: none;
+    filter: drop-shadow(11px 0px 15px black);
+}
+
+.pages .info
+{
+    position: absolute;
+    top: 25px;
+    margin: 50px;
+    width: 700px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.pages .info h1
+{
+    display: flex;
+    justify-content: center;
+    color:rgb(0, 225, 19);
+    font-size: 3rem;
+    position: relative;
+    
+
+}
+
+
+
+.pages .info p
+{
+    display: flex;
+    color:white;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    
+}
+
+.pages button
+{
+    position: absolute;
+    left: 60px;
+    bottom: 130px;
+    background-color:var(--txtbg);
+    width: 130px;
+    height: 50px;
+    border: none;
+    color: black;
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .2s all linear;
+
+}
+.pages button:hover
+{
+    box-shadow: 0px 0px 5px 0px gray;
+    transform: scale(1.1);
+}
+
+
+.page1
+{
+    display: flex;
+    justify-content: right;
+}
+
+.page1 .pic
+{
+    display: flex;
+    position:absolute;
+    left: 10px;
+    top: 100px;
+    transform: translateX(-110%);
+    transition: .4s all linear;
+}
+.page1 .txt
+{
+    position: absolute;
+    top: 100px;
+    right: 5%;
+    width: 450px;
+    height: 500px;
+}
+.page1 .txt h1
+{
+    display:flex;
+    justify-content:center;
+    font-size: 3.6rem;
+    color: var(--txtbg);
+}
+.page1 .txt .skill
+{
+    margin: 2px;
+    font-size: 20px;
+    color: white;
+}
+.page1 .txt .skill .sk
+{
+    margin: 20px;
+    width: 100%;
+    height: 20px;
+    background-color: aliceblue;
+    position: relative;
+    border-radius: 20px;
+    
+}
+
+.page1 .txt .skill .sk span
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 20px;
+    border-radius: 20px;
+    background-color:var(--txtbg);
+    transition: .4s linear;
+
+}
+    
+.page2 .text
+{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+    margin: 40px;
+    width: 50rem;
+    transform: translateX(-110%);
+    transition: .4s all linear;
+
+    
+
+}
+.page2 .text h1
+{
+    display: flex;
+    justify-content: center;
+    color: var(--txtbg);
+    font-size: 3rem;
+}
+.page2 .text p
+{
+    display: flex;
+    justify-content: left;
+    color: white;
+}
+
+
+.page2 .pic1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 150px;
+    margin: 10px 70px;
+    width: 25rem;
+    height: 25rem;
+    transform: translateX(200%);
+    transition: .5s all linear;
+}
+.pic2
+{
+    transform: translateX(0%);
+}
+.page2 .pic1 img
+{
+    position: absolute;
+    width: 45rem;
+    height: 45rem;
+}
+
+.page3 .card
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 25rem;
+    position: relative;
+    top: 150px;
+    left: 100px;
+    background-color: black;
+    box-shadow: 1px 1px 5px gainsboro;
+    border-radius: 30px;
+    transition: .2s all linear;
+    margin: 20px;
+    overflow: hidden;
+    
+}
+.page3 .card:hover
+{
+    transform:scale(1.1);
+    cursor: pointer;
+}
+.page3 .card .pic
+{
+    width: 10rem;
+    height: 10rem;
+    box-shadow: 5px 5px 10px var(--txtbg);
+    position: absolute;
+    top: 10px;
+    background-image: url(/cursor/h.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    
+    
+}
+
+.page3 .card .pic1
+{
+    width: 10rem;
+    height: 10rem;
+    box-shadow: 5px 5px 10px var(--txtbg);
+    position: absolute;
+    top: 10px;
+    background-image: url(/cursor/fi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    
+    
+}
+.page3 .card .pic2
+{
+    width: 10rem;
+    height: 10rem;
+    box-shadow: 5px 5px 10px var(--txtbg);
+    position: absolute;
+    top: 10px;
+    background-image: url(/cursor/mi.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    
+    
+}
+
+
+.page3 .team
+{
+    color: var(--txtbg);
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    left: 700px;
+}
+.page3 .card .txt
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 80px;
+    width: 18rem;
+    height: 13rem;
+}
+.page3 .card .txt h1
+{
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    color: var(--txtbg);
+}
+
+.page3 .card .txt p
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    color: white;
+}
+
+
+
+@media (max-width:1450px) {
+
+    .page0 .picture
+    {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        right:4px;
+    
+    }
+    .page0 .info
+    {
+        width: 35rem;
+        
+    }
+    .page0 .info h1
+    {
+        font-size: 2.5rem;
+    }
+    .page0 .info p 
+    {
+        font-size: 1rem;
+    }
+
+    .page1 .pic
+    {
+       
+       margin: 90px;
+        width: 20rem;
+        height: 20rem;
+
+    }
+    
+    .page1 .txt
+    {
+
+        width: 22rem;
+        height: 22rem;
+        margin: 0px -30px;
+    }
+
+    .page2 .pic1
+    {
+        position: absolute;
+        right: -5px;
+    }
+
+    .page2 .pic1 img
+    {
+        width: 35rem;
+        height: 35rem;
+    }
+    .page2 .text
+    {
+        width: 35rem;
+
+    }
+
+    .page3 .team
+    {
+        position: relative;
+        left: 600px;
+    }
+
+    .page3 .card
+    {
+        position: relative;
+        left: 10px;
+    }
+}
+
+
+@media (max-width:1300px) {
+
+
+
+    .page0 .picture
+    {
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        right:4px;
+    
+    }
+    .page0 .info
+    {
+        width: 35rem;
+        
+    }
+    .page0 .info h1
+    {
+        font-size: 2.5rem;
+    }
+    .page0 .info p 
+    {
+        font-size: 1rem;
+    }
+
+    .page1 .pic
+    {
+       
+       margin:100px 40px;
+        width: 15rem;
+        height: 15rem;
+
+    }
+    
+    .page1 .txt
+    {
+
+        width: 15rem;
+        height: 15rem;
+        margin: 0px 10px;
+    }
+
+    .page1 .txt .skill .sk
+    {
+        width: 100%;
+        height: 15px;
+    }
+    .page1 .txt .skill .sk span 
+    {
+        width: 100%;
+        height: 15px;
+    }
+
+    .page2 .pic1
+    {
+        position: absolute;
+        right: -80px;
+    }
+
+    .page2 .pic1 img
+    {
+        width: 25rem;
+        height: 25rem;
+    }
+    .page2 .text
+    {
+        width: 30rem;
+
+    }
+
+    .page3 .team
+    {
+        position: relative;
+        left: 450px;
+    }
+
+    .page3 .card
+    {
+        position: relative;
+        left: -30px;
+    
+    }
+
+    .page3 .card .pic
+    {
+        position: absolute;
+        top: 20px;
+        width: 8rem;
+        height:8rem;
+    }
+    .page3 .card .txt h1
+    {
+        font-size: 1.4rem;
+    }
+    .page3 .card .txt p 
+    {
+        font-size: .8rem;
+    }
+
+
+    
+}
+
+
+
+
+@media (max-width:992px) {
+
+
+
+    .page0 .picture
+    {
+        width: 10rem;
+        height: 10rem;
+        position: absolute;
+        right:4px;
+    
+    }
+    .page0 .info
+    {
+        width: 25rem;
+        
+    }
+    .page0 .info h1
+    {
+        font-size: 1.7rem;
+    }
+    .page0 .info p 
+    {
+        font-size: .8rem;
+    }
+
+    .page1 .pic
+    {
+       
+       margin:100px 40px;
+        width: 10rem;
+        height: 10rem;
+
+    }
+    
+    .page1 .txt
+    {
+
+        width: 15rem;
+        height: 15rem;
+        margin: 0px 10px;
+    }
+
+    .page1 .txt h1 
+    {
+        font-size: 2rem;
+    }
+    .page1 .txt .skill 
+    {
+        font-size: 1rem;
+    }
+
+    .page1 .txt .skill .sk
+    {
+        width: 100%;
+        height: 10px;
+    }
+    .page1 .txt .skill .sk span 
+    {
+        width: 100%;
+        height: 10px;
+    }
+
+    .page2 .pic1
+    {
+        position: absolute;
+        right: -80px;
+    }
+
+    .page2 .pic1 img
+    {
+        width: 20rem;
+        height: 20rem;
+    }
+    .page2 .text
+    {
+        width: 20rem;
+
+    }
+
+    .page2 .text h1
+    {
+        font-size: 2rem;
+    }
+
+    .page2 .text p 
+    {
+        font-size: 1rem;
+    }
+
+    .page3 .team
+    {
+        position: relative;
+        left: 350px;
+    }
+
+    .page3 .card
+    {
+        position: relative;
+        left: -30px;
+    
+    }
+
+    .page3 .card .pic
+    {
+        position: absolute;
+        top: 30px;
+        width: 5rem;
+        height:5rem;
+    }
+    .page3 .card .txt h1
+    {
+        font-size: 1.4rem;
+        position: absolute;
+        top:-40px;
+        left: 20px;
+    }
+    .page3 .card .txt p 
+    {
+        font-size: .8rem;
+    }
+
+
+    
+}
+
+
+
+@media (max-width:769px) {
+
+    *{
+        display: block;
+
+    }
+
+    .navi
+    {
+        display: none;
+    }
+
+
+
+    .page0,.page1,.page2
+    {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .page0 .picture
+    {
+        display: block;
+        width: 10rem;
+        height: 10rem;
+        position: relative;
+        top: 460px;
+        left: 50px;
+
+    
+    }
+    .page0 button 
+    {
+        position: absolute;
+        top: 250px;
+        width: 50%;
+        height: 40px;
+        font-size: .7rem;
+        
+    }
+  
+    .page0 .info
+    {
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        width: 20rem;
+        height: 15rem;
+        
+    }
+    .page0 .info h1
+    {
+        font-size: 1rem;
+    }
+    .page0 .info p 
+    {
+        font-size: .4rem;
+    }
+
+    .page1 .pic
+    {
+       
+        position: absolute;
+        top: 0px;
+        left: 50px;
+        width: 10rem;
+        height: 10rem;
+
+    }
+    
+    .page1 .txt
+    {
+
+        width: 15rem;
+        height: 15rem;
+        position: absolute;
+        top: 350px;
+        left: 100px;
+    }
+
+    .page1 .txt h1 
+    {
+        font-size: 2rem;
+    }
+    .page1 .txt .skill 
+    {
+        font-size: 1rem;
+    }
+
+    .page1 .txt .skill .sk
+    {
+        width: 100%;
+        height: 10px;
+    }
+    .page1 .txt .skill .sk span 
+    {
+        width: 100%;
+        height: 10px;
+    }
+
+    .page2 .pic1
+    {
+        position: absolute;
+        right: -150px;
+        top: 650px;
+        left: 150px;
+    }
+
+    .page2 .pic1 img
+    {
+        width: 20rem;
+        height: 20rem;
+    }
+    .page2 .text
+    {
+        width: 90%;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+
+    }
+
+    .page2 .text h1
+    {
+        font-size: 1.6rem;
+    }
+
+    .page2 .text p 
+    {
+        font-size: .5rem;
+    }
+
+  
+    .page3
+    {
+        display: block;
+    }
+    .page3 .team
+    {
+        position: absolute;
+        left: 200px;
+    }
+
+
+    .page3 .card 
+    {
+        
+        position: relative;
+        left: 60px;
+        width: 10rem;
+        height: 15rem;
+        padding: 70px;
+        margin: 50px;
+    
+    }
+
+    .page3 .card .pic
+    {
+        position: absolute;
+        top: 30px;
+        width: 5rem;
+        height:5rem;
+    }
+    .page3 .card .txt h1
+    {
+        font-size: 1.4rem;
+        position: absolute;
+        top:-40px;
+        left: 20px;
+    }
+    .page3 .card .txt p 
+    {
+        font-size: .8rem;
+    }
+
+
+    
+}
